@@ -129,7 +129,7 @@ void recvThread(TCPClient* c)
 
 int main()
 {
-	TCPClient c("192.168.199.132", 2324);
+	TCPClient c("127.0.0.1", 8000);
 	c.initSocket();
 	if (CLIENT_ERROR == c.connectServer()) return -1;
 	running = true;
@@ -141,7 +141,7 @@ int main()
 
 	while (running)
 	{
-		Sleep(500);
+		sleep(500);
 	}
 
 	std::cout << "程序结束" << std::endl;
